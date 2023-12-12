@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for game in games %}
+    <h3>{{ game.name }}</h3>
+    <p>Ціна: ${{ game.price }}</p>
+    <a href="{{ url_for('add_to_cart', game_id=game.id) }}">Додати в кошик</a>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
